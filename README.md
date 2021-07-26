@@ -11,7 +11,7 @@ A simple program that visualise sort algorithms written in java
 * Merge Sort 
 * Quick Sort 
 
-![image](image/Screenshot 2021-07-11 100142.jpg)
+![Image](image/Screenshot 2021-07-11 100142.jpg)
 
 
 Run this project
