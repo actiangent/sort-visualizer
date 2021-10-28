@@ -8,7 +8,7 @@ public class App implements ActionListener {
 
     private final SortArray sortArray = new SortArray();
     private final JFrame frame = new JFrame("Sort Visualizer");
-    private final String[] algorithms = {"Bubble Sort", "Insertion Sort", "Pancake Sort", "Merge Sort", "Counting Sort", "Quick Sort"};
+    private final String[] algorithms = {"Bubble Sort", "Insertion Sort", "Pancake Sort", "Merge Sort", "Counting Sort", "Quick Sort", "Radix Sort", "Selection Sort"};
     private final JComboBox<String> algorithmsList = new JComboBox<>(algorithms);
     private final JButton runSortingButton = new JButton("Begin");
 

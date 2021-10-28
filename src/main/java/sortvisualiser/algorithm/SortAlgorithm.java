@@ -59,7 +59,7 @@ class SortAlgorithm {
         int[] count = new int[array.getMaxValue() + 1];
         for (int i = 0; i < result.length; ++i) {
             array.updateSingle(i, result[i] = array.getValue(i), delay, false);
-            ++count[array.getValue(i)];
+            count[array.getValue(i)]++;
         }
         for (int i = 1; i < count.length; ++i)
             count[i] += count[i - 1];
@@ -73,6 +73,25 @@ class SortAlgorithm {
             int pivotPoint = findPivotPoint(array, lowIndex, highIndex, delay);
             QuickSort(array, lowIndex, pivotPoint - 1, delay);
             QuickSort(array, pivotPoint + 1, highIndex, delay);
+        }
+    }
+
+    void RadixSort(SortArray array, int delay) {
+        for (int i = 1; array.getMaxValue() / i > 0; i *= 10) {
+            modifiedCountingSort(array, i, delay);
+        }
+    }
+
+    void SelectionSort(SortArray array, int delay) {
+        for (int i = 0; i < array.getArrayLength() - 1; i++) {
+            int min_index = i;
+            for (int j = i + 1; j < array.getArrayLength(); j++) {
+                array.updateSingle(j, array.getValue(j), delay, false);
+                if (array.getValue(j) < array.getValue(min_index)) {
+                    min_index = j;
+                }
+            }
+            array.swap(i, min_index, 50, true);
         }
     }
 
@@ -145,5 +164,18 @@ class SortAlgorithm {
         return maxIndex;
     }
 
+    private void modifiedCountingSort(SortArray array, int dig, int delay) {
+        array.setDelay(delay);
+        int[] result = new int[array.getArrayLength()];
+        int[] count = new int[10];
+        for (int i = 0; i < result.length; ++i) {
+            array.updateSingle(i, result[i] = array.getValue(i), delay, false);
+            count[(array.getValue(i) / dig) % 10]++;
+        }
+        for (int i = 1; i < count.length; ++i)
+            count[i] += count[i - 1];
+        for (int i = result.length - 1; i > -1; --i)
+            array.updateSingle(--count[(result[i] / dig) % 10], result[i], delay, true);
+    }
 
 }

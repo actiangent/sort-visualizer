@@ -12,9 +12,8 @@ public class SortArray extends JPanel {
     private final SortAlgorithmSelector algorithmSelector = new SortAlgorithmSelector();
     private final int[] array = new int[253];
     private final int[] barColors = new int[253];
+    private final int y = 681, width = 4;
     private int x = 0;
-    private final int y = 681;
-    private final int width = 4;
     private int totalArrayChanges;
     private int delay = 0;
     private boolean isShuffling = false;
