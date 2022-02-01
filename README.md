@@ -1,6 +1,6 @@
 # Sort Visualizer
 
-A simple program that visualise sort algorithms written in java
+A simple program that visualise sort algorithms written in Java and Kotlin
 
 ### Sort Algorithms
 
