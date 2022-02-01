@@ -20,4 +20,5 @@ Run this project
 * Download the zip files directly or by using git
   command ``git clone https://github.com/actiangent/Sort-Visualiser.git``
 * ``cd Sort-Visualiser``
+* ``cd Java`` or ``cd Kotlin`` project
 * run the files ``gradlew run`` (windows users use ``gradlew.bat``)
