@@ -88,8 +88,8 @@ public class SortArray extends JPanel {
     private void threadSleep(long delay) {
         try {
             Thread.sleep(delay);
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (InterruptedException interruptedException) {
+            System.out.println("Execution canceled");
         }
     }
 
