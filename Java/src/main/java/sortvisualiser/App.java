@@ -19,7 +19,7 @@ public class App implements ActionListener {
     private final JButton runSortingButton = new JButton("Begin");
 
     public static void main(String[] args) {
-        new sortvisualiser.App().run();
+        new App().run();
     }
 
     private void run() {
@@ -44,7 +44,7 @@ public class App implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //run on a another thread
+        //run on another thread
 
         executor.submit(() -> {
             runSortingButton.setEnabled(false);
