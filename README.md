@@ -1,6 +1,6 @@
 # Sort Visualizer
 
-A simple program that visualise sort algorithms written in Java
+A simple program that visualize sort algorithms written in Java
 
 ### Sort Algorithms
 
@@ -18,7 +18,7 @@ A simple program that visualise sort algorithms written in Java
 Run this project
 
 * Download the zip files directly or by using git
-  command ``git clone https://github.com/actiangent/Sort-Visualiser.git``
-* ``cd Sort-Visualiser``
+  command ``git@github.com:actiangent/sort-visualizer.git``
+* ``cd sort-visualizer``
 * ``cd Java``
-* run the files ``gradlew run`` (windows users use ``gradlew.bat``)
+* run ``gradlew run`` (windows users use ``gradlew.bat``)
